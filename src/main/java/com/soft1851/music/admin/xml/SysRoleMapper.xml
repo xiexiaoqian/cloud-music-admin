@@ -3,7 +3,7 @@
 <mapper namespace="com.soft1851.music.admin.mapper.SysRoleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.soft1851.music.admin.entity.SysRole">
+    <resultMap id="BaseResultMap" type="com.soft1851.music.admin.domain.entity.SysRole">
         <id column="role_id" property="roleId" />
         <result column="role_name" property="roleName" />
         <result column="descriiption" property="descriiption" />

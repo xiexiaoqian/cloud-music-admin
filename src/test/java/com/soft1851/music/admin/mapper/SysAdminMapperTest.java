@@ -1,7 +1,7 @@
 package com.soft1851.music.admin.mapper;
 
-import com.soft1851.music.admin.entity.SysAdmin;
-import com.soft1851.music.admin.entity.SysRole;
+import com.soft1851.music.admin.domain.entity.SysAdmin;
+import com.soft1851.music.admin.domain.entity.SysRole;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -31,4 +31,10 @@ class SysAdminMapperTest {
     void getAdminByName() {
         System.out.println(sysAdminMapper.getSysAdminByName("mqxu"));
     }
+
+    @Test
+    void getAdminById() {
+        System.out.println(sysAdminMapper.getSysAdminById("DE35D7CC05AF96A21D7ADFC8651E6614"));
+    }
+
 }

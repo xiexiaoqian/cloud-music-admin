@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -21,28 +21,28 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("user_song_list")
-public class UserSongList extends Model<UserSongList> {
+@TableName("type_song_list")
+public class TypeSongList extends Model<TypeSongList> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户歌单id
+     * 类型歌单id
      */
     @TableId("id")
     private String id;
+
+    /**
+     * 类型id
+     */
+    @TableField("type_id")
+    private String typeId;
 
     /**
      * 歌单id
      */
     @TableField("song_list_id")
     private String songListId;
-
-    /**
-     * 用户id
-     */
-    @TableField("user_id")
-    private String userId;
 
     /**
      * 创建时间
@@ -55,6 +55,12 @@ public class UserSongList extends Model<UserSongList> {
      */
     @TableField("update_time")
     private LocalDateTime updateTime;
+
+    /**
+     * 类型名称
+     */
+    @TableField("type_name")
+    private String typeName;
 
 
     @Override

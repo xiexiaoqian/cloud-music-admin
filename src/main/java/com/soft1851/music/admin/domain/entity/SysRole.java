@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

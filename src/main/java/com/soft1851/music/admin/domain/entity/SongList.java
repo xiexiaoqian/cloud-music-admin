@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -21,82 +21,58 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("song")
-public class Song extends Model<Song> {
+@TableName("song_list")
+public class SongList extends Model<SongList> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 歌曲id
+     * 歌单id
      */
-    @TableId("song_id")
-    private String songId;
+    @TableId("song_list_id")
+    private String songListId;
 
     /**
-     * 歌曲名称
+     * 歌单名称
      */
-    @TableField("song_name")
-    private String songName;
+    @TableField("song_list_name")
+    private String songListName;
 
     /**
-     * 排序id
-     */
-    @TableField("sort_id")
-    private String sortId;
-
-    /**
-     * 歌手
-     */
-    @TableField("singer")
-    private String singer;
-
-    /**
-     * 时长
-     */
-    @TableField("duration")
-    private String duration;
-
-    /**
-     * 封面图
+     * 封面
      */
     @TableField("thumbnail")
     private String thumbnail;
 
     /**
-     * 歌曲地址
+     * 歌单类型
      */
-    @TableField("url")
-    private String url;
+    @TableField("type")
+    private String type;
 
     /**
-     * 歌词
+     * 歌曲数
      */
-    @TableField("lyric")
-    private String lyric;
+    @TableField("song_count")
+    private Integer songCount;
 
     /**
-     * 评论量
-     */
-    @TableField("comment_count")
-    private Integer commentCount;
-
-    /**
-     * 收藏量
+     * 收藏数
      */
     @TableField("like_count")
     private Integer likeCount;
 
     /**
-     * 播放量
+     * 评论数
      */
-    @TableField("play_count")
-    private Integer playCount;
+    @TableField("comment_count")
+    private Integer commentCount;
 
     /**
      * 删除标志
      */
     @TableField("delete_flag")
-    private String deleteFlag;
+    private Integer deleteFlag;
 
     /**
      * 修改时间
@@ -110,10 +86,16 @@ public class Song extends Model<Song> {
     @TableField("create_time")
     private LocalDateTime createTime;
 
+    /**
+     * 播放量
+     */
+    @TableField("play_counts")
+    private Integer playCounts;
+
 
     @Override
     protected Serializable pkVal() {
-        return this.songId;
+        return this.songListId;
     }
 
 }

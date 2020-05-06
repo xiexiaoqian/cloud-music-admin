@@ -1,6 +1,6 @@
 package com.soft1851.music.admin.service;
 
-import com.soft1851.music.admin.entity.SysRole;
+import com.soft1851.music.admin.domain.entity.SysRole;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

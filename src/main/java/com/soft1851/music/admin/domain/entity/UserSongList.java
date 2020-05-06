@@ -1,9 +1,9 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
+import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
@@ -21,28 +21,40 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("role_menu")
-public class RoleMenu extends Model<RoleMenu> {
+@TableName("user_song_list")
+public class UserSongList extends Model<UserSongList> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键
+     * 用户歌单id
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId("id")
+    private String id;
 
     /**
-     * 角色id
+     * 歌单id
      */
-    @TableField("role_id")
-    private Integer roleId;
+    @TableField("song_list_id")
+    private String songListId;
 
     /**
-     * 资源id
+     * 用户id
      */
-    @TableField("menu_id")
-    private Integer menuId;
+    @TableField("user_id")
+    private String userId;
+
+    /**
+     * 创建时间
+     */
+    @TableField("create_time")
+    private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
+    @TableField("update_time")
+    private LocalDateTime updateTime;
 
 
     @Override

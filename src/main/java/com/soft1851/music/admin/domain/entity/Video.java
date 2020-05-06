@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
@@ -21,40 +21,52 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("song_like")
-public class SongLike extends Model<SongLike> {
+@TableName("video")
+public class Video extends Model<Video> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 点赞id
-     */
-    @TableId("like_id")
-    private String likeId;
-
-    /**
-     * 点赞用户id
-     */
-    @TableField("user_id")
-    private String userId;
-
-    /**
-     * 歌曲id
-     */
-    @TableField("song_id")
-    private String songId;
-
-    /**
-     * 评论id
-     */
-    @TableField("comment_id")
-    private String commentId;
-
-    /**
      * 视频id
      */
-    @TableField("video_id")
+    @TableId("video_id")
     private String videoId;
+
+    /**
+     * 视频名称
+     */
+    @TableField("video_name")
+    private String videoName;
+
+    /**
+     * 视频时长
+     */
+    @TableField("duration")
+    private String duration;
+
+    /**
+     * 视频封面
+     */
+    @TableField("thumbnail")
+    private String thumbnail;
+
+    /**
+     * 评论数量
+     */
+    @TableField("comment_count")
+    private Integer commentCount;
+
+    /**
+     * 点赞数量
+     */
+    @TableField("like_count")
+    private Integer likeCount;
+
+    /**
+     * 播放数量
+     */
+    @TableField("play_count")
+    private Integer playCount;
 
     /**
      * 创建时间
@@ -68,16 +80,10 @@ public class SongLike extends Model<SongLike> {
     @TableField("update_time")
     private LocalDateTime updateTime;
 
-    /**
-     * 歌单id
-     */
-    @TableField("song_list_id")
-    private String songListId;
-
 
     @Override
     protected Serializable pkVal() {
-        return this.likeId;
+        return this.videoId;
     }
 
 }

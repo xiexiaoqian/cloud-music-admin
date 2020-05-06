@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -21,8 +21,8 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("role_admin")
-public class RoleAdmin extends Model<RoleAdmin> {
+@TableName("role_menu")
+public class RoleMenu extends Model<RoleMenu> {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,16 +33,16 @@ public class RoleAdmin extends Model<RoleAdmin> {
     private Integer id;
 
     /**
-     * 管理id
-     */
-    @TableField("admin_id")
-    private String adminId;
-
-    /**
      * 角色id
      */
     @TableField("role_id")
-    private String roleId;
+    private Integer roleId;
+
+    /**
+     * 资源id
+     */
+    @TableField("menu_id")
+    private Integer menuId;
 
 
     @Override

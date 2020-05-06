@@ -1,8 +1,8 @@
 package com.soft1851.music.admin.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.soft1851.music.admin.entity.SysMenu;
-import com.soft1851.music.admin.entity.SysRole;
+import com.soft1851.music.admin.domain.entity.SysMenu;
+import com.soft1851.music.admin.domain.entity.SysRole;
 import com.soft1851.music.admin.util.TreeBuilder;
 import com.soft1851.music.admin.util.TreeNode;
 import org.junit.jupiter.api.Test;

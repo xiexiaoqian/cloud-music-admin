@@ -1,8 +1,8 @@
 package com.soft1851.music.admin.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.soft1851.music.admin.entity.SysMenu;
-import com.soft1851.music.admin.entity.SysRole;
+import com.soft1851.music.admin.domain.entity.SysMenu;
+import com.soft1851.music.admin.domain.entity.SysRole;
 import com.soft1851.music.admin.mapper.SysRoleMapper;
 import com.soft1851.music.admin.service.SysRoleService;
 import com.soft1851.music.admin.util.TreeBuilder;

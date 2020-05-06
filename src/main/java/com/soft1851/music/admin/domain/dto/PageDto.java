@@ -1,4 +1,4 @@
-package com.soft1851.music.admin.dto;
+package com.soft1851.music.admin.domain.dto;
 
 import lombok.Builder;
 import lombok.Data;

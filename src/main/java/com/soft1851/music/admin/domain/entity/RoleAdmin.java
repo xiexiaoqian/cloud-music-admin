@@ -1,9 +1,9 @@
-package com.soft1851.music.admin.entity;
+package com.soft1851.music.admin.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
@@ -21,46 +21,28 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("song_list_music")
-public class SongListMusic extends Model<SongListMusic> {
+@TableName("role_admin")
+public class RoleAdmin extends Model<RoleAdmin> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 主键
      */
-    @TableId("id")
-    private String id;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
 
     /**
-     * 歌曲歌单id
+     * 管理id
      */
-    @TableField("song_list_id")
-    private String songListId;
+    @TableField("admin_id")
+    private String adminId;
 
     /**
-     * 歌曲id
+     * 角色id
      */
-    @TableField("song_id")
-    private String songId;
-
-    /**
-     * 创建时间
-     */
-    @TableField("create_time")
-    private LocalDateTime createTime;
-
-    /**
-     * 更新时间
-     */
-    @TableField("update_time")
-    private LocalDateTime updateTime;
-
-    /**
-     * 榜单排名
-     */
-    @TableField("ratio")
-    private Integer ratio;
+    @TableField("role_id")
+    private String roleId;
 
 
     @Override
