@@ -64,4 +64,16 @@ public interface SongListService extends IService<SongList> {
      * @return
      */
     ResponseResult batchDeleteById(String idLists);
+
+    /**
+     * 热门歌单
+     *
+     * @return
+     */
+    List<SongList> getTopSongList();
+
+    /**
+     * 导出歌单
+     */
+    void exportData();
 }

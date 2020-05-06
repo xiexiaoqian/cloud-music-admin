@@ -87,4 +87,13 @@ public class SongListController {
         return songListService.batchDeleteById(ids);
     }
 
+    @GetMapping(value = "/all")
+    public List<SongList> getSongList() {
+        return songListService.getTopSongList();
+    }
+
+    @GetMapping(value = "/export")
+    public void export() {
+        songListService.exportData();
+    }
 }
